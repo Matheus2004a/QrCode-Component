@@ -14,6 +14,18 @@
     --Dark-blue: hsl(218, 44%, 22%);
 }
 
+body{
+    background-color: var(--Light-gray);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 main{
     display: grid;
     place-content: center;
@@ -25,12 +37,12 @@ main{
 }
 
 figure .img-qr-code{
-    width: 20rem;
-    border-radius: 1rem;
+    width: 100%;
+    border-radius: .5rem;
 }
 
 main :is(h1,p){
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 main h1{
@@ -48,8 +60,15 @@ a{
 
 main,footer{
     text-align: center;
+    margin: 1rem;
 }
 
-footer{
-    margin: 1rem 0;
+@media (min-width: 880px){
+    main{
+        width: 30%;
+    }
+
+    main :is(h1,p){
+        padding: 0 2.5rem;
+    }
 }
